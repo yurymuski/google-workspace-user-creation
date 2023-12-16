@@ -12,8 +12,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the script and requirements files to the working directory
 COPY create_users.py .
+COPY update_emails.py .
+COPY update_aliases.py .
 COPY users.csv .
 COPY service_account_credentials.json .
 
 # Run the Python script
-CMD ["python", "create_users.py"]
+ENTRYPOINT ["python"]
+CMD ["create_users.py"]

@@ -1,2 +1,5 @@
 service_account_credentials.json
+service_account_credentials*
 users.csv
+users*
+*.csv
